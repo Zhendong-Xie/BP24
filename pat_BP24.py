@@ -6,7 +6,7 @@ import pandas as pd
 from scipy.constants import N_A
 
 import contour_plot as cplt
-
+#1
 
 # Here you should give the polymerization, monomer size, distance of the PEG. 
 def pat_bp24(N_PEG, R, delta, N_L, NB=3, output=None):
