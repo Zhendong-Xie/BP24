@@ -25,7 +25,7 @@ def con_line(x_mesh, y_mesh, z, clim):
 def contour_plot(x, y, z, pltfig=None, label=None, ft=None, MyColor="PiYG", 
                  xylog=None, clim=None, con_line=None, pltcbar=1, ax_line=None, 
                  cticks=None, xticks=None, yticks=None, grid=None, adjust=None,
-                 ContourLable=None):
+                 ContourLable=None, cbar_inv=None):
     """Update: 2025.12.30."""
     # 2. Some default settings: figure size, fontsize, and lables. 
     if pltfig is None:
@@ -255,6 +255,8 @@ def contour_plot(x, y, z, pltfig=None, label=None, ft=None, MyColor="PiYG",
             ctick_labels = cticks["clables"]  
             cbar.set_ticks(cbar_ticks)  
             cbar.set_ticklabels(ctick_labels, fontweight="bold")
+        if cbar_inv is not None:
+            cbar.ax.invert_yaxis()
 
     #------------------------------------------------------------------------
     # 9. Plot lines in the contour plot: _ax_line_
